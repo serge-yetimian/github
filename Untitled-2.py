@@ -111,3 +111,8 @@ class RecipeApp:
                 self.image_label = tk.Label(self.window, image=img)
                 self.image_label.image = img  # Keep a reference to the image
                 self.image_label.grid(column=1, row=4, pady=10)
+            
+            else:
+                self.show_error(f"Image not found: {image_path}")
+        except Exception as e:
+            self.show_error(f"Error loading image: {e}")
