@@ -68,3 +68,19 @@ class RecipeApp:
                 recipes.sort(key=lambda x: int(x['servings']))
             else:
                 recipes.sort(key=lambda x: x['title'].strip().lower())  # Default to title sorting
+
+            print(f"Sorted recipes: {recipes}")  # Debug: check sorted recipes
+            return recipes
+        except FileNotFoundError:
+            self.show_error("CSV file not found.")
+            return []
+    
+    
+    def show_recipe(self, recipe):
+        title = recipe['title']
+        ready_in_minutes = recipe['readyInMinutes']
+        servings = recipe['servings']
+        instructions = recipe['recipe']
+        image_path = recipe['image_path']
+
+        self.clear_previous_output()
