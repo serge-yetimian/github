@@ -126,3 +126,6 @@ class RecipeApp:
         self.clear_previous_output()
         error_label = tk.Label(self.window, text=message, fg="red", bg="#9ddfd3")
         error_label.grid(column=1, row=2, pady=10)
+
+    def run_app(self):
+        self.window.mainloop()
