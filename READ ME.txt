@@ -1,0 +1,112 @@
+READ ME
+
+Recipe App
+GitHub Repository : 
+serge-yetimian/github
+The source code for this project is available on GitHub:Serge-yetimian
+
+
+Identification
+Name: Serge Yetiian
+P-number: P475439
+Course code: IY499
+
+Declaration of Own Work:
+I confirm that this assignment is my own work.
+Where I have referred to academic sources, I have provided in-text citations and included the sources in the final reference list.
+
+Introduction: 
+This project is a simple implementation of a recipe application using the Tkinter library for GUI and CSV data for recipe storage. It allows users to search for recipes, sort results, and view detailed recipe information, including an image and cooking instructions.
+
+Installation
+To run the application, ensure you have Python installed, and then install the required dependencies from the requirements.txt file using the following command:
+
+bash
+
+To Run the Script, Follow These Steps:
+Check if Python is Installed
+Open Command Prompt and run:
+
+bash
+Copy code
+python --version
+If not installed, download it from python.org and ensure you add Python to PATH during installation.
+
+Install Required Packages
+Run the following commands in Command Prompt:
+
+Install Pillow (for image handling):
+bash
+Copy code
+pip install pillow
+Verify Installation
+Check if the libraries are installed correctly by running:
+
+bash
+Copy code
+python
+>>> from PIL import Image, ImageTk  # No error means successful installation
+>>> import tkinter as tk  # Tkinter comes pre-installed with Python
+>>> exit()
+Prepare the CSV File and Images
+
+Ensure recipes.csv exists in the script’s directory.
+Add recipe images as specified in the image_path column of the CSV file.
+Run the Script
+Navigate to the folder containing your script:
+
+bash
+Copy code
+cd path\to\your\script
+Run the script:
+
+bash
+Copy code
+python your_script.py
+ 
+How to Use
+Enter a recipe name in the search bar to find matching recipes.
+Select a sorting criterion (Title, Ready Time, or Servings) from the dropdown menu.
+Click the "Search" button to view the sorted recipe list.
+Running the Application
+bash
+Copy code
+python main.py  
+Running Unit Tests
+bash
+Copy code
+python UnitTest.py  
+Application Features
+Search Recipes: Search for recipes by name.
+Sort Recipes: Sort results by title, preparation time, or number of servings.
+View Details: Display recipe details, including an image, preparation time, and instructions.
+Error Handling: Handles missing files, invalid inputs, and image loading issues gracefully.
+Libraries Used
+The following libraries are used in this project:
+
+Tkinter: For creating the graphical user interface.
+Pillow: For loading and displaying images.
+csv: For reading recipe data from a CSV file.
+Project Structure
+main.py: The main script that runs the Recipe App.
+recipes.csv: The CSV file containing recipe data.
+requirements.txt: A file listing required Python libraries.
+UnitTest.py (optional): Script containing unit tests for the application.
+ErrorHandling/: (Optional) Contains classes for handling various errors.
+Unit Tests
+The project includes unit tests to validate key functionalities of the application.
+
+To run the unit tests, navigate to the project directory and execute:
+
+bash
+Copy code
+python UnitTest.py  
+This will run all the test cases defined in the UnitTest.py file.
+
+License
+This project is for personal and educational use. Modify and distribute as needed.
+
+
+Your Name Serge Yetimian
+
+Date 5/12/2024
