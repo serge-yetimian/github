@@ -121,3 +121,8 @@ class RecipeApp:
         for widget in self.window.grid_slaves():
             if int(widget.grid_info()["row"]) > 1:
                 widget.destroy()
+
+    def show_error(self, message):
+        self.clear_previous_output()
+        error_label = tk.Label(self.window, text=message, fg="red", bg="#9ddfd3")
+        error_label.grid(column=1, row=2, pady=10)
