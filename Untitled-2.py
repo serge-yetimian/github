@@ -88,3 +88,10 @@ class RecipeApp:
         # Recipe Title
         self.recipe_label = tk.Label(self.window, text=f"Recipe: {title}", bg="#9ddfd3", font=("Helvetica", 14, "bold"))
         self.recipe_label.grid(column=1, row=2, pady=5)
+
+         # Recipe Details Text
+        self.details_text = tk.Text(master=self.window, height=10, width=50, bg="#ffdada")
+        self.details_text.grid(column=1, row=3, pady=10)
+        self.details_text.insert(tk.END, f"Ready in Minutes: {ready_in_minutes}\n")
+        self.details_text.insert(tk.END, f"Servings: {servings}\n\n")
+        self.details_text.insert(tk.END, f"Instructions:\n{instructions}\n")
