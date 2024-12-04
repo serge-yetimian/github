@@ -60,3 +60,11 @@ class RecipeApp:
                 recipes = [row for row in reader if query in row['title'].strip().lower()]
             
             print(f"Recipes matching query '{query}': {recipes}") 
+
+            # Sort recipes by selected criterion
+            if sort_by == "readyinminutes":
+                recipes.sort(key=lambda x: int(x['readyInMinutes']))
+            elif sort_by == "servings":
+                recipes.sort(key=lambda x: int(x['servings']))
+            else:
+                recipes.sort(key=lambda x: x['title'].strip().lower())  # Default to title sorting
