@@ -129,3 +129,8 @@ class RecipeApp:
 
     def run_app(self):
         self.window.mainloop()
+
+# Run the App
+if __name__ == "__main__":
+    recipe_app = RecipeApp()
+    recipe_app.run_app()
