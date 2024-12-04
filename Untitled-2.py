@@ -95,3 +95,7 @@ class RecipeApp:
         self.details_text.insert(tk.END, f"Ready in Minutes: {ready_in_minutes}\n")
         self.details_text.insert(tk.END, f"Servings: {servings}\n\n")
         self.details_text.insert(tk.END, f"Instructions:\n{instructions}\n")
+
+        # Load and display the image
+        self.display_image(image_path)
+        
