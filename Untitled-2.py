@@ -98,4 +98,6 @@ class RecipeApp:
 
         # Load and display the image
         self.display_image(image_path)
-        
+
+    def display_image(self, image_path):
+        try:
