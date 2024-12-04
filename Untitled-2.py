@@ -116,3 +116,8 @@ class RecipeApp:
                 self.show_error(f"Image not found: {image_path}")
         except Exception as e:
             self.show_error(f"Error loading image: {e}")
+    
+    def clear_previous_output(self):
+        for widget in self.window.grid_slaves():
+            if int(widget.grid_info()["row"]) > 1:
+                widget.destroy()
