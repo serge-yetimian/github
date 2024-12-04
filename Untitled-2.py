@@ -84,3 +84,7 @@ class RecipeApp:
         image_path = recipe['image_path']
 
         self.clear_previous_output()
+
+        # Recipe Title
+        self.recipe_label = tk.Label(self.window, text=f"Recipe: {title}", bg="#9ddfd3", font=("Helvetica", 14, "bold"))
+        self.recipe_label.grid(column=1, row=2, pady=5)
