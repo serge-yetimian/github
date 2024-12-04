@@ -101,3 +101,10 @@ class RecipeApp:
 
     def display_image(self, image_path):
         try:
+            if os.path.exists(image_path):
+                # Open image using Pillow
+                image = Image.open(image_path)
+                image = image.resize((300, 200))  # Resize the image to fit within the UI
+                img = ImageTk.PhotoImage(image)  # Convert image to Tkinter format
+
+                
