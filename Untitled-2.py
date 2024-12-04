@@ -46,3 +46,17 @@ class RecipeApp:
 
         print(f"Searching for: {query}")
         print(f"Sorting by: {sort_method}")
+
+        if sorted_recipes:
+            print(f"Found recipes: {sorted_recipes}")
+            self.show_recipe(sorted_recipes[0])  # Display the first sorted recipe
+        else:
+            self.show_error("No recipes found.")
+
+    def get_sorted_recipes_from_csv(self, query, sort_by="title"):
+        try:
+            with open(CSV_FILE_PATH, mode='r') as file:
+                reader = csv.DictReader(file)
+                recipes = [row for row in reader if query in row['title'].strip().lower()]
+            
+            print(f"Recipes matching query '{query}': {recipes}") 
