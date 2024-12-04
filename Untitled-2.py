@@ -36,4 +36,13 @@ class RecipeApp:
         self.sort_menu = tk.OptionMenu(self.window, self.sort_var, *self.sort_options)
         self.sort_menu.grid(column=1, row=1, padx=5)
 
+        def run_search_query(self):
+        query = self.search_entry.get().lower().strip()
+        sort_method = self.sort_var.get().lower().replace(" ", "")  # Normalize to match sort keys
         
+        if not query:
+            self.show_error("Please enter a recipe name.")
+            return
+
+        print(f"Searching for: {query}")
+        print(f"Sorting by: {sort_method}")
