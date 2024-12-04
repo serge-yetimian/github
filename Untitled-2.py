@@ -25,4 +25,15 @@ class RecipeApp:
                                        command=self.run_search_query)
         self.search_button.grid(column=2, row=0, padx=5)
 
+         # Sorting UI
+        self.sort_label = tk.Label(self.window, text="Sort By", bg="#ea86b6")
+        self.sort_label.grid(column=0, row=1, padx=5)
+
+        self.sort_options = ["Title", "Ready Time", "Servings"]
+        self.sort_var = tk.StringVar()
+        self.sort_var.set(self.sort_options[0])  # Default to "Title"
+
+        self.sort_menu = tk.OptionMenu(self.window, self.sort_var, *self.sort_options)
+        self.sort_menu.grid(column=1, row=1, padx=5)
+
         
